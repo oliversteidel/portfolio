@@ -13,7 +13,8 @@ $clr-p39: hsl(200, 100%, 39%);
 $clr-p95: hsl(199, 100%, 95%);
 
 //gradients
-$gradient-p: linear-gradient(90deg, $clr-p39, $clr-p26);
+$gradient-p: linear-gradient(hsl(200, 100%, 45%), hsl(206, 100%, 20%));
+$gradient-s: linear-gradient(90deg, transparent 5%, hsla(220, 18%, 10%, 0.9) 15%, $clr-p10 95%);
 
 // Fonts
 $ff-p: 'Raleway', sans-serif;

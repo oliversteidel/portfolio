@@ -1,5 +1,6 @@
 @use './setup' as *;
 @use './components/nav';
+@use './components/hero';
 
 html {
     font-family: $ff-p;
