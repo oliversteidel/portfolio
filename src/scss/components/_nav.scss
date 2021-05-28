@@ -1,0 +1,112 @@
+@use '../setup/index' as *;
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 6.25rem;
+    padding: 0 2rem;
+    font-family: $ff-s;
+    background-color: $clr-p10;
+
+    @include mq-up($bp-large) {
+        padding: 0 5rem;
+    }
+
+    svg {
+        width: 6.25rem;
+    }
+
+    &__burger {
+        background: none;
+        border: none;
+        width: 1.875rem;
+        height: 1.875rem;
+        cursor: pointer;
+
+        @include mq-up($bp-medium) {
+            display: none;
+        }
+
+        span {
+            background: $clr-p39;
+            display: block;
+        }
+
+        &--top {
+            width: 50%;
+            height: 1px;
+            transform-origin: top left;
+            transition: transform 0.5s ease-in;
+        }
+
+        &--center {
+            width: 100%;
+            height: 1px;
+            transition: transform 0.5s ease-in;
+        }
+
+        &--bottom {
+            width: 50%;
+            height: 1px;
+            align-self: flex-end;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-in;
+        }
+    }
+
+    .btn-active {
+        .nav__burger--top {
+            transform: translate(5px, 4px) rotate(45deg);
+        }
+
+        .nav__burger--center {
+            transform: rotate(-45deg);
+        }
+
+        .nav__burger--bottom {
+            transform: translate(-4px, -4px) rotate(45deg);
+        }
+    }
+
+    &__links {
+        position: absolute;
+        top: 6.25rem;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 2rem;
+        background: $clr-p10;
+        transform: translateX(100%);
+        transition: transform 0.75s cubic-bezier(.17,.67,.26,1);
+
+        @include mq-up($bp-medium) {
+            all: unset;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav__link {
+            margin-top: 2rem;
+
+            @include mq-up($bp-medium) {
+                margin-top: 0;
+                list-style: none;
+            }
+
+            a {
+                font-size: 1.6rem;
+                color: $clr-p95;
+                text-decoration: none;                
+
+                @include mq-up($bp-medium) {
+                    font-size: 1rem;
+                    margin-left: 5rem;
+                }
+            }
+        }
+    }
+
+    .nav-open {
+        transform: translateX(0);
+    }
+}

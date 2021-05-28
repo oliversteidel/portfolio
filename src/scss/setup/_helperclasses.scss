@@ -1,0 +1,37 @@
+// helper classes flex-box
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.ai-fs {
+    align-items: flex-start;
+}
+
+.ai-fe {
+    align-items: flex-end;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-fs {
+    justify-content: flex-start;
+}
+
+.jc-fe {
+    justify-content: flex-end;
+}

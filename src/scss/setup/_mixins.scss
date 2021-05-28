@@ -1,0 +1,21 @@
+
+// media queries
+@mixin mq-up($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin mq-down($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
+// pseudo elements
+
+@mixin pseudo($content: '') {
+    content: $content;
+    position: absolute;
+}
+

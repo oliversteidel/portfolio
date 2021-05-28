@@ -1,0 +1,20 @@
+ // breakpoints (recomment using em units!)
+$bp-small: 37.5em; //600px
+$bp-medium: 50em; //800px
+$bp-large: 62.5em; //1000px
+$bp-xlarge: 81.25em; //1300px
+
+// colors (naming: $clr-{first letter of color-group}{lightness-value})
+
+//primary
+$clr-p10: hsl(220, 18%, 10%);
+$clr-p26: hsl(206, 100%, 26%);
+$clr-p39: hsl(200, 100%, 39%);
+$clr-p95: hsl(199, 100%, 95%);
+
+//gradients
+$gradient-p: linear-gradient(90deg, $clr-p39, $clr-p26);
+
+// Fonts
+$ff-p: 'Raleway', sans-serif;
+$ff-s: 'Michroma', sans-serif;

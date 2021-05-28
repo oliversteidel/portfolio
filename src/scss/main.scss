@@ -1,0 +1,10 @@
+@use './setup' as *;
+@use './components/nav';
+
+html {
+    font-family: $ff-p;
+    overflow-x: hidden;
+}
+
+
+
