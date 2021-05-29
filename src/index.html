@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -33,19 +33,19 @@
                 </svg>
         </div>
         <button class="nav__burger flex-col jc-sb" id="burger">
-            <span class="nav__burger--top"></span>
-            <span class="nav__burger--center"></span>
-            <span class="nav__burger--bottom"></span>
+            <div class="nav__burger--top"></div>
+            <div class="nav__burger--center"></div>
+            <div class="nav__burger--bottom"></div>
         </button>
             <ul class="nav__links flex-col ai-fe" id="nav-list">
-                <li class="list-item"><a href="#" class="nav__link">Home</a><span class="border"></span></li>
-                <li class="list-item"><a href="#" class="nav__link">Portfolio</a><span class="border"></span></li>
+                <li class="list-item"><a href="#hero" class="nav__link">Home</a><span class="border"></span></li>
+                <li class="list-item"><a href="#portfolio" class="nav__link">Portfolio</a><span class="border"></span></li>
                 <li class="list-item"><a href="#" class="nav__link">About</a><span class="border"></span></li>
                 <li class="list-item"><a href="#" class="nav__link">Kontakt</a><span class="border"></span></li>
             </ul>
     </nav>
     <main>
-        <div class="hero flex ai-c">
+        <section class="hero flex ai-c" id="hero">
             <div class="hero__background">
                 <span>HTML5</span>
                 <span>CSS3</span>
@@ -56,9 +56,12 @@
             </div>
             <header class="hero__header flex-col">
                 <h1><span class="first-name">oliver</span><span class="last-name">steidel</span></h1>
-                <h2>Frontend Webentwickler</h2>
+                <h2 class="sub-title">Frontend Webentwickler <span class="overlay"></span></h2>
             </header>
-        </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <h2>Portfolio</h2>
+        </section>
     </main>
     
 <script src="./js/main.js"></script>

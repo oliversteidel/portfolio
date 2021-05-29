@@ -1,4 +1,3 @@
-
 // media queries
 @mixin mq-up($size) {
     @media only screen and (min-width: $size) {
@@ -13,7 +12,7 @@
 }
 
 // pseudo elements
-@mixin pseudo($content: '') {
+@mixin pseudo($content: "") {
     content: $content;
     position: absolute;
 }
@@ -21,8 +20,6 @@
 // linear-gradient for text
 @mixin text-gradient($gradient) {
     background: $gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
