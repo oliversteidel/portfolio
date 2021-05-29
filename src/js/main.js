@@ -1,8 +1,8 @@
 //first-name & last-name slide-in animation
 //subtitle fade-in animation
-gsap.from(".first-name", {duration: 1, x: 200, opacity: 0, ease: "power3.out", delay: 0.75});
-gsap.from(".last-name", {duration: 1, x: -100, opacity: 0, ease: "power3.out", delay: 0.5});
-gsap.to(".overlay", {duration: 1, scaleX: 0, delay: 2 });
+gsap.from(".first-name", { duration: 1, x: 200, opacity: 0, ease: "power3.out", delay: 0.75 });
+gsap.from(".last-name", { duration: 1, x: -100, opacity: 0, ease: "power3.out", delay: 0.5 });
+gsap.to(".overlay", { duration: 1, scaleX: 0, delay: 2 });
 
 
 // ##################################
@@ -64,3 +64,42 @@ const removeActiveClass = () => {
 // ###################################
 
 
+
+const moveTechItems = () => {
+    let move = gsap.timeline({repeat: 5, delay: 0.5 });
+    let move1 = gsap.timeline({repeat: 5, delay: 1 });
+    let move2= gsap.timeline({repeat: 5, delay: 1.5 });
+    let move3 = gsap.timeline({repeat: 5, delay: 2 });
+    let move4 = gsap.timeline({repeat: 5, delay: 2.5 });
+    let move5 = gsap.timeline({repeat: 5, delay: 3 });
+    
+    moveItem(move, ".tech1");
+    moveItem(move1, ".tech2");
+    moveItem(move2, ".tech3");
+    moveItem(move3, ".tech4");
+    moveItem(move4, ".tech5");
+    moveItem(move5, ".tech6");
+}
+
+const moveItem = (timeline, element) => {
+    timeline.to(element, {duration: 2, opacity: 1});
+    let [posX, posY] = setRandomCoordinates(0, 500);    
+    timeline.to(element, {duration: 10, x: posX, y: posY});
+    [posX, posY] = setRandomCoordinates(-300, 0);
+    timeline.to(element, {duration: 10, x: posX, y: posY});
+    timeline.to(element, {duration: 10, x: 0, y: 0});
+    timeline.to(element, {duration: 1, opacity: 0});
+}
+
+// returns a random number between min & max
+const setRandomCoordinates = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let posX = Math.floor(Math.random() * (max - min)) + min;
+    let posY = Math.floor(Math.random() * (max - min)) + min;
+    console.log(`x:${posX}, y:${posY}`);
+    return [posX, posY];
+
+}
+
+moveTechItems();
