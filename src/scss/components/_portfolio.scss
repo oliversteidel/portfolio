@@ -1,4 +1,70 @@
+@use '../setup/index' as *;
+
 .portfolio {
+    width: 100%;
     min-height: 100vh;
     padding: 6.25rem 2rem;
+    background: $clr-p10;
+
+    @include mq-up($bp-large) {
+        padding: 6.25rem 5rem;
+    }
+
+    &__title {
+        font-size: clamp(3rem, 5vw, 6.25rem);
+        font-weight: 100;
+        text-transform: uppercase;
+        @include text-gradient($gradient-p)
+    }
+
+    .container {
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+
+    .card {
+        width: 100%;
+        max-width: 31.25rem;
+        padding: 2rem 1rem;
+        margin-bottom: 5rem;
+        border: 1px solid $clr-p39;
+        border-radius: 5px;
+
+        &__title, &__tech-description {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: $clr-p95;
+            text-align: center;
+        }
+
+        &__img-container {
+            position: relative;
+            width: 100%;
+            min-height: 18.75rem;
+
+            .img--swap {
+                position: absolute;
+                width: 80%;
+                top: 50%;
+                left: 50%;
+                border-radius: 5px;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 30px 5px black;
+                overflow: hidden;
+            }
+
+            .img--1 {
+                z-index: 2;
+                transform: translate(-75%, -75%);
+            }
+
+            .img--2 {
+                z-index: 1;
+                transform: translate(-25%, -25%);
+            }
+
+        }
+    }
+
 }
