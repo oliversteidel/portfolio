@@ -64,7 +64,7 @@ const removeActiveClass = () => {
 // ###################################
 
 // init gsap.timelines for each "tech"-element and run these timelines with moveItem()
-const moveTechItems = () => {        
+const moveTechItems = () => {
     let tech1 = gsap.timeline({ repeat: 5, delay: 2 });
     let tech2 = gsap.timeline({ repeat: 5, delay: 4 });
     let tech3 = gsap.timeline({ repeat: 5, delay: 6 });
@@ -83,10 +83,10 @@ const moveTechItems = () => {
 
     techItems.forEach(item => {
         item.addEventListener('mouseover', function (e) {
-            
+
             switch (getTimelineFromClassName(e.target.className)) {
                 case 'tech1':
-                    tech1.pause();                    
+                    tech1.pause();
                     break;
                 case 'tech2':
                     tech2.pause();
@@ -106,7 +106,7 @@ const moveTechItems = () => {
             }
         })
 
-        item.addEventListener('mouseout', function(e) {
+        item.addEventListener('mouseout', function (e) {
 
             switch (getTimelineFromClassName(e.target.className)) {
                 case 'tech1':
@@ -159,6 +159,38 @@ const getTimelineFromClassName = (str) => {
 }
 
 moveTechItems();
+
+
+
+// ###################################
+
+// card link hover animation
+
+const btn = document.querySelectorAll(".card__link");
+
+
+btn.forEach(btn => {
+    let border = btn.previousElementSibling;
+    let btnWidth = btn.offsetWidth;
+    let btnHeight = btn.offsetHeight;
+
+    let tlExp = gsap.timeline({ paused: true });
+
+    tlExp.to(border, { rotation: 0, duration: 0.1 });
+    tlExp.to(border, { height: btnHeight, y: -13, duration: 0.2 }, "+=0.3");
+    tlExp.to(border, { width: btnWidth, duration: 0.2 }, "+=0.3");
+
+    btn.addEventListener('mouseenter', () => {
+        tlExp.play();
+    });
+
+    btn.addEventListener('mouseout', () => {
+        tlExp.pause();
+        tlExp.reverse();
+    });
+})
+
+
 
 
 

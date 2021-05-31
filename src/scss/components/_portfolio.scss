@@ -14,28 +14,42 @@
         font-size: clamp(3rem, 5vw, 6.25rem);
         font-weight: 100;
         text-transform: uppercase;
-        @include text-gradient($gradient-p)
+        @include text-gradient($gradient-p);
+        margin-bottom: 3rem;
     }
 
     .container {
         width: 100%;
         flex-wrap: wrap;
 
+        @include mq-up($bp-medium) {
+            padding: 0 3rem;
+        }
+
+        @include mq-up($bp-xlarge) {
+            justify-content: space-evenly;
+        }
     }
 
     .card {
         width: 100%;
         max-width: 31.25rem;
+        min-height: 40rem;
         padding: 2rem 1rem;
         margin-bottom: 5rem;
-        border: 1px solid $clr-p39;
+        border: 1px solid $clr-p26;
         border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        &__title, &__tech-description {
+        &__title,
+        &__tech-description {
             font-size: 1.2rem;
             font-weight: 300;
             color: $clr-p95;
             text-align: center;
+            margin-bottom: 1rem;
         }
 
         &__img-container {
@@ -63,8 +77,59 @@
                 z-index: 1;
                 transform: translate(-25%, -25%);
             }
+        }
 
+        &__links-container {
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+
+
+            @include mq-up($bp-small) {
+                flex-direction: row;
+            }
+        }
+
+        .wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+
+            @include mq-up($bp-small) {
+                margin: 0;
+            }
+        }
+
+        .btn-border {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            width: 0px;
+            height: 75%;
+            background: transparent;
+            border: 1px solid #e5f7ff;
+            transform: translateY(0) rotate(90deg);
+            transform-origin: center;
+            z-index: 1;
+                    
+        }
+
+        &__link {
+            position: relative;
+            padding: 1em 1.5em;
+            text-transform: uppercase;
+            color: $clr-p95;
+            z-index: 2;
+        }
+
+        .wrapper:hover .btn-border {
+            border-color: $clr-p39;
+            border-radius: 5px;
         }
     }
 
+    .card + .card {
+        @include mq-up($bp-xlarge) {
+            margin-left: 20%;
+        }
+    }
 }

@@ -8,12 +8,29 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: 10px;
+  scrollbar-color: hsla(220, 18%, 30%, 0.2) hsl(220, 18%, 10%); 
+  
 }
 
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;  
+  line-height: 1.5; 
+  
+}
+
+// scrollbar webkit
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: hsl(220, 18%, 10%);
+}
+
+body::-webkit-scrollbar-thumb:vertical {
+  background: hsla(220, 18%, 30%, 0.2);
 }
 
 // a-elements which have a class are not underlined
@@ -41,6 +58,7 @@ textarea,
 select {
   font: inherit;
 }
+
 
 // Remove all animations, transitions and smooth scroll for people that prefer not to see them
 @media (prefers-reduced-motion: reduce) {
