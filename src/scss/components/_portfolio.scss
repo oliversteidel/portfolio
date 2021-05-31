@@ -59,23 +59,34 @@
 
             .img--swap {
                 position: absolute;
-                width: 80%;
+                width: 100%;
                 top: 50%;
                 left: 50%;
                 border-radius: 5px;
-                transform: translate(-50%, -50%);
                 box-shadow: 0 0 30px 5px black;
                 overflow: hidden;
+                transition: transform 0.3s ease-in;
             }
 
             .img--1 {
                 z-index: 2;
-                transform: translate(-75%, -75%);
+                transform-origin: top left;
+                transform: scale(0.75) translate(-68.5%, -68.5%);
+            }
+
+            .img--1:hover {
+                transform: scale(1.05) translate(-50%, -50%);
             }
 
             .img--2 {
                 z-index: 1;
-                transform: translate(-25%, -25%);
+                transform: scale(0.75) translate(-65%, -65%);
+                transform-origin: bottom right;
+            }
+
+            .img--2:hover {
+                transform: scale(1.05) translate(-45%, -45%);
+                z-index: 3;
             }
         }
 
@@ -83,7 +94,6 @@
             padding: 0 2rem;
             display: flex;
             flex-direction: column;
-
 
             @include mq-up($bp-small) {
                 flex-direction: row;
@@ -110,7 +120,6 @@
             transform: translateY(0) rotate(90deg);
             transform-origin: center;
             z-index: 1;
-                    
         }
 
         &__link {
