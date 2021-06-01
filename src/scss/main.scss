@@ -2,6 +2,7 @@
 @use './components/nav';
 @use './components/hero';
 @use './components/portfolio';
+@use './components/about';
 
 html {
     font-family: $ff-p;
