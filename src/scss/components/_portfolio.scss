@@ -11,7 +11,7 @@
     }
 
     &__title {
-        font-size: clamp(3rem, 5vw, 6.25rem);
+        font-size: clamp(2.8rem, 5vw, 6.25rem);
         font-weight: 100;
         text-transform: uppercase;
         @include text-gradient($gradient-p);
@@ -20,10 +20,13 @@
 
     .container {
         width: 100%;
-        flex-wrap: wrap;
+        
 
-        @include mq-up($bp-medium) {
-            padding: 0 3rem;
+        // @include mq-up($bp-medium) {
+        //     padding: 0 3rem;
+        // }
+        @include mq-up(75em) {
+            flex-direction: row;
         }
 
         @include mq-up($bp-xlarge) {
@@ -55,7 +58,7 @@
         &__img-container {
             position: relative;
             width: 100%;
-            min-height: 18.75rem;
+            min-height: 18.75rem; 
 
             .img--swap {
                 position: absolute;
@@ -65,7 +68,7 @@
                 border-radius: 5px;
                 box-shadow: 5px 5px 30px 10px rgba(black, 0.75);
                 overflow: hidden;
-                transition: transform 0.5s cubic-bezier(.86,-0.47,.36,1.46);
+                transition: transform 0.5s cubic-bezier(0.86, -0.47, 0.36, 1.46);
             }
 
             .img--1 {
@@ -93,12 +96,13 @@
         &__img-container--rotate {
             position: relative;
             width: 100%;
-            min-height: 37.5rem;
+            min-height: 35rem;
             perspective: 1000px;
 
-            .img--rotate {
+            .img--rotate {                
                 position: absolute;
-                width: 50%;
+                width: 75%;
+                max-width: 15rem;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -106,6 +110,10 @@
                 overflow: hidden;
                 border-radius: 5px;
                 box-shadow: 5px 5px 30px 10px rgba(black, 0.2);
+
+                @include mq-up($bp-small) {
+                    width: 50%;
+                }
             }
 
             .img--back {
@@ -142,24 +150,39 @@
         }
 
         .btn-border {
-            position: absolute;
-            top: 0;
-            left: 0px;
-            width: 0px;
-            height: 75%;
-            background: transparent;
-            border: 1px solid #e5f7ff;
-            transform: translateY(0) rotate(90deg);
-            transform-origin: center;
-            z-index: 1;
+            visibility: hidden;
+            
+            @include mq-up($bp-xlarge) {
+                visibility: visible;
+                position: absolute;
+                top: 25%;
+                left: 0;
+                width: 0px;
+                height: 50%;
+                background: transparent;
+                border: 1px solid #e5f7ff;
+                transform: translateY(0) rotate(90deg);
+                transform-origin: center;
+                z-index: 1;
+            }
         }
 
-        &__link {
+        &__link {            
             position: relative;
+            display: block;
+            min-width: 11rem;
             padding: 1em 1.5em;
             text-transform: uppercase;
+            text-align: center;
             color: $clr-p95;
             z-index: 2;
+            border: 1px solid $clr-p39;
+            border-radius: 5px;
+
+
+            @include mq-up($bp-xlarge) {
+                border: none;
+            }
         }
 
         .wrapper:hover .btn-border {
@@ -168,9 +191,13 @@
         }
     }
 
-    .card + .card {
-        @include mq-up($bp-xlarge) {
-            margin-left: 20%;
+    
+
+    .card--tall {      
+
+        @include mq-up($bp-medium) {
+            min-height: 53.125rem;
+            
         }
     }
 }

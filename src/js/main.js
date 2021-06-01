@@ -177,7 +177,7 @@ btn.forEach(btn => {
     let tlExp = gsap.timeline({ paused: true });
 
     tlExp.to(border, { rotation: 0, duration: 0.1 });
-    tlExp.to(border, { height: btnHeight, y: -13, duration: 0.2 }, "+=0.3");
+    tlExp.to(border, { height: btnHeight, y: -16, duration: 0.2 }, "+=0.3");
     tlExp.to(border, { width: btnWidth, duration: 0.2 }, "+=0.3");
 
     btn.addEventListener('mouseenter', () => {
