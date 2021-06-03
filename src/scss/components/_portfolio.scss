@@ -68,7 +68,7 @@
                 border-radius: 5px;
                 box-shadow: 5px 5px 30px 10px rgba(black, 0.75);
                 overflow: hidden;
-                transition: transform 0.5s cubic-bezier(0.86, -0.47, 0.36, 1.46);
+                //transition: transform 0.5s cubic-bezier(0.86, -0.47, 0.36, 1.46);
             }
 
             .img--1 {
@@ -87,10 +87,7 @@
                 transform-origin: bottom right;
             }
 
-            .img--2:hover {
-                transform: scale(1.05) translate(-45%, -45%);
-                z-index: 3;
-            }
+            
         }
 
         &__img-container--rotate {
