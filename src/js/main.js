@@ -161,46 +161,6 @@ const getTimelineFromClassName = (str) => {
 moveTechItems();
 
 
-// ###################################
-
-// hover animation for portfolio-img--2
-
-const img2 = document.querySelectorAll('.img--2');
-console.log(img2);
-
-const changeZindex = (element, index) => {
-    element.style.zIndex = index;
-}
-
-img2.forEach(img => {
-
-    img.addEventListener('mouseenter', () => {
-        const img1 = img.previousElementSibling;
-        let tlImgUp = gsap.timeline();
-        let imgStartX = img.offsetLeft;
-        let img1StartX = img1.offsetLeft;
-        console.log(img1StartX);
-
-        tlImgUp.to(img, { duration: 0.2, x: -100 });
-        tlImgUp.to(img1, { duration: 0.2, x: -500, onComplete: changeZindex(img, 2) });
-        tlImgUp.to(img1, { duration: 0.2, x: -img1StartX });
-        tlImgUp.to(img, { duration: 0.2, x: -imgStartX, scale: 1.05 });
-    });
-
-    img.addEventListener('mouseleave', () => {
-        const img1 = img.previousElementSibling;
-        let tlImgDown = gsap.timeline();
-        let imgStartX = img.offsetLeft;
-        let img1StartX = img1.offsetLeft;
-
-        tlImgDown.to(img1, { duration: 0.2, x: -500 });
-        tlImgDown.to(img, { duration: 0.2, x: -100, scale: 0.75,  onComplete: changeZindex(img, 0) });
-        tlImgDown.to(img1, { duration: 0.2, x: -img1StartX });
-        tlImgDown.to(img, { duration: 0.2, x: -imgStartX });
-    })
-})
-
-
 
 // ###################################
 

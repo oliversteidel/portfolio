@@ -55,40 +55,7 @@
             margin-bottom: 1rem;
         }
 
-        &__img-container {
-            position: relative;
-            width: 100%;
-            min-height: 18.75rem; 
-
-            .img--swap {
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                border-radius: 5px;
-                box-shadow: 5px 5px 30px 10px rgba(black, 0.75);
-                overflow: hidden;
-                //transition: transform 0.5s cubic-bezier(0.86, -0.47, 0.36, 1.46);
-            }
-
-            .img--1 {
-                z-index: 2;
-                transform-origin: top left;
-                transform: scale(0.75) translate(-68.5%, -68.5%);
-            }
-
-            .img--1:hover {
-                transform: scale(1.05) translate(-50%, -50%);
-            }
-
-            .img--2 {
-                z-index: 1;
-                transform: scale(0.75) translate(-65%, -65%);
-                transform-origin: bottom right;
-            }
-
-            
-        }
+        
 
         &__img-container--rotate {
             position: relative;
@@ -96,10 +63,21 @@
             min-height: 35rem;
             perspective: 1000px;
 
-            .img--rotate {                
-                position: absolute;
+            .img--acr {
+                width: 100%;
+            }
+
+            .img--up {
                 width: 75%;
                 max-width: 15rem;
+
+                @include mq-up($bp-small) {
+                    width: 50%;
+                }
+            }
+
+            .img--rotate {                
+                position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -108,9 +86,7 @@
                 border-radius: 5px;
                 box-shadow: 5px 5px 30px 10px rgba(black, 0.2);
 
-                @include mq-up($bp-small) {
-                    width: 50%;
-                }
+                
             }
 
             .img--back {
@@ -125,6 +101,10 @@
 
         &__img-container--rotate:hover .img--back {
             transform: translate(-50%, -50%) rotateY(0);
+        }
+
+        &__img-container--small {
+            min-height: 12rem;
         }
 
         &__links-container {
@@ -169,12 +149,17 @@
             display: block;
             min-width: 11rem;
             padding: 1em 1.5em;
+            font-size: 0.8rem;
             text-transform: uppercase;
             text-align: center;
             color: $clr-p95;
             z-index: 2;
             border: 1px solid $clr-p39;
             border-radius: 5px;
+
+            @include mq-up(75em) {
+                font-size: 1rem;
+            }
 
 
             @include mq-up($bp-xlarge) {
