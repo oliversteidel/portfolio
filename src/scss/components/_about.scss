@@ -34,51 +34,109 @@
 
     .container {
         width: 100%;
+    }
 
-        h4 {
-            @include text-gradient($gradient-p);
-            text-transform: uppercase;
-            font-size: 2rem;
-            font-weight: 200;
+    .container--tech {
+        height: 100%;
+        position: relative;
+        font-size: 10px;
+
+        .tech-wrapper {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            width: 20vw;
+            height: 17.5vw;
+            max-width: 160px;
+            max-height: 140px;
+            display: grid;
+            place-items: center;
+            clip-path: polygon(0% 25%, 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%);
+            background: #0087c8;
+            transform-origin: center center;
+            transition: transform 0.5s cubic-bezier(0.25, 0.12, 0.34, 1.58);
         }
 
-        .skill-box {
-            max-width: 40rem;
-            padding: 1rem;
-            margin-bottom: 3rem;
-            border: 1px solid $clr-p26;
-            border-radius: 5px;
+        .polygon {
+            width: calc(20vw - 2px);
+            height: calc(17.5vw - 2px);
+            max-width: 158px;
+            max-height: 138px;
+            display: grid;
+            place-items: center;
+            clip-path: polygon(0% 25%, 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%);
+            background: #15181e;
+        }
 
-            .wrapper {
-                width: 100%;
-                justify-content: space-between;
-                align-items: center;
-            }
+        .w1 {
+            transform: translate(calc(-24em - 1em), -11em);
+        }
+        .w2 {
+            transform: translate(-8em, -11em);
+        }
+        .w3 {
+            transform: translate(calc(8em + 1em), -11em);
+        }
+        .w4 {
+            transform: translate(calc(-32em - 1.5em));
+        }
+        .w5 {
+            transform: translate(calc(-16em - 0.5em));
+        }
+        .w6 {
+            transform: translate(17.5em);
+        }
+        .w7 {
+            transform: translate(calc(-24em - 1em), 11em);
+        }
+        .w8 {
+            transform: translate(-8em, 11em);
+        }
+        .w9 {
+            transform: translate(calc(8em + 1em), 11em);
+        }
+        .w10 {
+            transform: translate(0.5em);
+        }
 
-            .col {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
+        .w1:hover {
+            transform: translate(calc(-24em - 1em), -11em) scale(1.4);
+        }
+        .w2:hover {
+            transform: translate(-8em, -11em) scale(1.4);
+        }
+        .w3:hover {
+            transform: translate(calc(8em + 1em), -11em) scale(1.4);
+        }
+        .w4:hover {
+            transform: translate(calc(-32em - 1.5em)) scale(1.4);
+        }
+        .w5:hover {
+            transform: translate(calc(-16em - 0.5em)) scale(1.4);
+        }
+        .w6:hover {
+            transform: translate(17.5em) scale(1.4);
+        }
+        .w7:hover {
+            transform: translate(calc(-24em - 1em), 11em) scale(1.4);
+        }
+        .w8:hover {
+            transform: translate(-8em, 11em) scale(1.4);
+        }
+        .w9:hover {
+            transform: translate(calc(8em + 1em), 11em) scale(1.4);
+        }
+        .w10:hover {
+            transform: translate(0.5em) scale(1.4);
+        }
 
-                p {
-                    font-size: clamp(0.9rem, 3vw, 1.3rem);
-                    font-weight: 200;
-                    margin-bottom: 0.5em;
-                    color: $clr-p95;
-                }
-
-                p:last-child {
-                    margin-bottom: 0;
-                }
-            }
+        p {
+            font-size: clamp(0.8rem, 3vw, 1.5rem);
+            color: $clr-p95;
         }
     }
 
-    .container:nth-child(2) {
-        @include mq-up($bp-xlarge) {
-            padding: 5%;
-        }
+    .fz-large {
+        font-size: 12px;
     }
 }

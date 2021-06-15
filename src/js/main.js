@@ -195,6 +195,26 @@ btn.forEach(btn => {
 })
 
 
+// ###################################
+
+// honeycomb hover animation
+
+
+const polygons = document.querySelectorAll(".tech-wrapper");
+const techContainer = document.querySelector(".container--tech");
+
+
+polygons.forEach(polygon => {
+    polygon.addEventListener('mouseover', function () {
+        techContainer.classList.add("fz-large");
+    })
+
+    polygon.addEventListener('mouseleave', function () {
+        techContainer.classList.remove("fz-large");
+    })
+})
+
+
 
 
 

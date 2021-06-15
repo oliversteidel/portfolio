@@ -3,6 +3,7 @@
 .nav {
     position: fixed;
     width: 100vw;
+    max-width: 160rem;
     height: 6.25rem;
     padding: 0 2rem;
     font-family: $ff-s;
