@@ -3,7 +3,7 @@
 .portfolio {
     width: 100%;
     min-height: 100vh;
-    padding: 6.25rem 2rem;
+    padding: 6.25rem 2rem 0rem 2rem;
     background: $clr-p10;
 
     @include mq-up($bp-large) {

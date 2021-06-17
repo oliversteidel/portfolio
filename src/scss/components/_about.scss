@@ -29,21 +29,58 @@
         letter-spacing: 0.05em;
         line-height: 1.5em;
         color: $clr-p95;
-        margin-bottom: 1.5em;
+        margin-bottom: 2em;
     }
 
     .container {
         width: 100%;
+
+        h3 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 100;
+            text-transform: uppercase;
+            @include text-gradient($gradient-p);
+            
+            @include mq-up($bp-xlarge) {
+                margin: 2rem 0 3rem 5rem;
+                
+            }
+        }
     }
 
     .container--tech {
-        height: 100%;
         position: relative;
-        font-size: 10px;
+        height: 50vh;
+        font-size: 4px; //controls the translate values of its children
+        background: $clr-p10;
+
+        @include mq-up($bp-xsmall) {
+            font-size: 5px;
+        }
+
+        @include mq-up(25.625em) {
+            font-size: 6px;
+        }
+
+        @include mq-up(31.25em) {
+            font-size: 7px;
+        }
+
+        @include mq-up($bp-small) {
+            font-size: 8px;
+        }
+
+        @include mq-up(43.75em) {
+            font-size: 9px;
+        }
+
+        @include mq-up($bp-medium) {
+            font-size: 10px;
+        }
 
         .tech-wrapper {
             position: absolute;
-            top: 40%;
+            top: 30%;
             left: 50%;
             width: 20vw;
             height: 17.5vw;
@@ -55,6 +92,12 @@
             background: #0087c8;
             transform-origin: center center;
             transition: transform 0.5s cubic-bezier(0.25, 0.12, 0.34, 1.58);
+
+            @include mq-up($bp-xlarge) {
+                top: 40%;
+                left: 55%;
+            }
+
         }
 
         .polygon {
