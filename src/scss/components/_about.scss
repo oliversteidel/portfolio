@@ -34,18 +34,6 @@
 
     .container {
         width: 100%;
-
-        h3 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 100;
-            text-transform: uppercase;
-            @include text-gradient($gradient-p);
-            
-            @include mq-up($bp-xlarge) {
-                margin: 2rem 0 3rem 5rem;
-                
-            }
-        }
     }
 
     .container--tech {
@@ -78,6 +66,10 @@
             font-size: 10px;
         }
 
+        @include mq-up($bp-xlarge) {
+            height: 100%;
+        }
+
         .tech-wrapper {
             position: absolute;
             top: 30%;
@@ -97,7 +89,6 @@
                 top: 40%;
                 left: 55%;
             }
-
         }
 
         .polygon {
