@@ -1,0 +1,24 @@
+@use '../setup/index' as *;
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    padding: 6.25rem 2rem;
+    background: $clr-p10;
+
+    @include mq-up($bp-large) {
+        padding: 6.25rem 5rem;
+    }
+
+    @include mq-up($bp-xlarge) {
+        flex-direction: row;
+    }
+
+    &__title {
+        font-size: clamp(2.8rem, 5vw, 6.25rem);
+        font-weight: 100;
+        text-transform: uppercase;
+        @include text-gradient($gradient-p);
+        margin-bottom: 3rem;
+    }
+}
