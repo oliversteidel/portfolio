@@ -18,6 +18,14 @@
         margin-bottom: 3rem;
     }
 
+    .container {
+        width: 100%;
+
+        @include mq-up($bp-large) {
+            flex-direction: row;
+        }
+    }
+
     .form-container {
         width: 100%;
     }
@@ -25,7 +33,11 @@
     form {
         .wrapper {
             width: 100%;
-            gap: 1rem;
+            
+            @include mq-up($bp-large) {
+                flex-direction: row;
+                gap: 1rem;
+            }
         }
 
         .form-group {
@@ -65,21 +77,33 @@
     }
 
     .social-container {
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-        
+        width: 100%;        
+        justify-content: space-between;
+        margin-top: 8rem;
+
+        @include mq-up($bp-large) {
+            flex-direction: column;
+            margin-top: 0;
+        }
 
         .linkbox-wrapper {
             width: 7.5rem;
             height: 100%;
-            font-size: 50px;
+            font-size: 30px;
             perspective: 700px;
             perspective-origin: 50% 50%;
             transform-style: preserve-3d;
             transition: perspective-origin 0.5s ease;
             padding-top: 3rem;
             transform: translateY(-3rem);
+
+            @include mq-up($bp-medium) {
+                font-size: 40px;
+            }
+
+            @include mq-up($bp-large) {
+                font-size: 50px;
+            }
 
             .scene {
                 position: relative;
@@ -129,7 +153,9 @@
         }
 
         .linkbox-wrapper:last-child {
-            padding-bottom: 2rem;
+            @include mq-up($bp-large) {
+                padding-bottom: 2rem;                
+            }
         }
 
         .linkbox-wrapper:hover {
