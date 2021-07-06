@@ -10,8 +10,10 @@
         padding: 6.25rem 5rem;
     }
 
-    @include mq-up($bp-xlarge) {
-        flex-direction: row;
+    &__wrapper {
+        @include mq-up($bp-xlarge) {
+            flex-direction: row;
+        }
     }
 
     &__title {
@@ -24,10 +26,10 @@
 
     &__text {
         max-width: 60ch;
-        font-size: clamp(0.9rem, 3vw, 1.3rem);
+        font-size: clamp(1rem, 3vw, 1.3rem);
         font-weight: 200;
         letter-spacing: 0.05em;
-        line-height: 1.5em;
+        line-height: 1.75em;
         color: $clr-p95;
         margin-bottom: 2em;
     }
@@ -39,7 +41,7 @@
     .container--tech {
         position: relative;
         height: 50vh;
-        font-size: 4px; //controls the translate values of its children
+        font-size: 4px; //controls the translate values (em) of its children
         background: $clr-p10;
 
         @include mq-up($bp-xsmall) {
@@ -172,5 +174,58 @@
 
     .fz-large {
         font-size: 12px;
+    }
+
+    &__softskills {
+        width: 100%;
+
+        &__heading {
+            font-size: clamp(1.5rem, 4vw, 3.25rem);
+            font-weight: 200;
+            @include text-gradient($gradient-p);
+            margin-bottom: 3rem;
+
+            @include mq-up($bp-xlarge) {
+                margin: 3rem 0;
+            }
+        }
+
+        &__cards-container {
+
+            @include mq-up($bp-xlarge) {
+                display: flex;
+            }
+            .softskills__card {
+                width: 100%;
+                padding: 1rem;
+                border: 1px solid $clr-p26;
+                border-radius: 5px;
+                margin-bottom: 2rem;
+                color: $clr-p95;
+
+                @include mq-up($bp-xlarge) {
+                    padding: 3rem;
+                }
+
+                &--title {
+                    font-size: clamp(1.3rem, 3vw, 1.6rem);
+                    font-weight: 200;
+                    margin-bottom: 2rem;
+                }
+
+                &--text {
+                    font-size: clamp(1rem, 3vw, 1.2rem);
+                    font-weight: 200;
+                    line-height: 1.75em;
+                    letter-spacing: 0.05em;
+                }
+            }
+
+            .softskills__card + .softskills__card {
+                @include mq-up($bp-xlarge) {
+                    margin-left: 6rem;
+                }
+            }
+        }
     }
 }

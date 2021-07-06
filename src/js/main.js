@@ -168,11 +168,6 @@ moveTechItems();
 
 const btn = document.querySelectorAll(".card__link");
 
-
-
-
-
-
 btn.forEach(btn => {
     let border = btn.previousElementSibling;
     let btnWidth = btn.offsetWidth;
