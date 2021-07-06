@@ -27,7 +27,7 @@
 
         @include mq-up($bp-medium) {
             display: none;
-        }      
+        }
 
         &--top {
             width: 50%;
@@ -121,15 +121,15 @@
                 transform-origin: left;
                 transform: scaleX(0);
             }
-    
+
             .nav__link:hover::before {
                 transform: scaleX(1);
             }
-    
+
             .nav__link--active {
                 color: $clr-p39;
             }
-    
+
             .border {
                 position: absolute;
                 bottom: -0.5rem;
@@ -138,12 +138,8 @@
                 height: 1px;
                 background: $clr-p39;
                 opacity: 0;
-    
-    
             }
         }
-
-        
     }
 
     .nav-open {

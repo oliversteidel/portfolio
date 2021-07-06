@@ -46,7 +46,7 @@ links.forEach(link => {
     link.addEventListener('click', function (evt) {
         removeActiveClass();
         const border = evt.target.nextSibling;
-        gsap.to(border, { opacity: 1 });
+        gsap.to(border, { opacity: 0.75 });
         gsap.to(border, { y: -35, duration: 0.3 });
         gsap.to(border, { opacity: 0, y: 0, delay: 0.5 });
         evt.target.classList.add('nav__link--active');

@@ -181,8 +181,8 @@
 
         &__heading {
             font-size: clamp(1.5rem, 4vw, 3.25rem);
-            font-weight: 200;
-            @include text-gradient($gradient-p);
+            font-weight: 200;            
+            color: $clr-p39;
             margin-bottom: 3rem;
 
             @include mq-up($bp-xlarge) {
@@ -197,7 +197,7 @@
             }
             .softskills__card {
                 width: 100%;
-                padding: 1rem;
+                padding: 2rem;
                 border: 1px solid $clr-p26;
                 border-radius: 5px;
                 margin-bottom: 2rem;
@@ -210,6 +210,7 @@
                 &--title {
                     font-size: clamp(1.3rem, 3vw, 1.6rem);
                     font-weight: 200;
+                    letter-spacing: 0.05em;
                     margin-bottom: 2rem;
                 }
 
