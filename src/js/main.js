@@ -56,8 +56,7 @@ const removeActiveClass = () => {
     })
 }
 
-const animateNavLinks = (event) => {
-    console.log(event.target.classList);
+const animateNavLinks = (event) => {    
     const border = event.target.nextSibling;
         gsap.to(border, { opacity: 0.75 });
         gsap.to(border, { y: -35, duration: 0.3 });
