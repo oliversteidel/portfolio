@@ -10,6 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Michroma&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="scss/main.scss">
     <title>Oliver Steidel - Webentwickler</title>
 </head>
@@ -57,12 +59,15 @@
                 <div class="nav__burger--bottom"></div>
             </button>
             <ul class="nav__links flex-col ai-fe" id="nav-list">
-                <li class="list-item"><a href="#hero" class="nav__link nav__link--active">Home</a><span
+                <li class="list-item"><a href="#hero" class="nav__link nav__link--hero nav__link--active">Home</a><span
                         class="border"></span></li>
-                <li class="list-item"><a href="#portfolio" class="nav__link">Portfolio</a><span class="border"></span>
+                <li class="list-item"><a href="#portfolio" class="nav__link nav__link--portfolio">Portfolio</a><span
+                        class="border"></span>
                 </li>
-                <li class="list-item"><a href="#about" class="nav__link">About</a><span class="border"></span></li>
-                <li class="list-item"><a href="#contact" class="nav__link">Contact</a><span class="border"></span></li>
+                <li class="list-item"><a href="#about" class="nav__link nav__link--about">About</a><span
+                        class="border"></span></li>
+                <li class="list-item"><a href="#contact" class="nav__link nav__link--contact">Contact</a><span
+                        class="border"></span></li>
             </ul>
         </nav>
         <main>
@@ -258,23 +263,27 @@
                     </div>
                 </div>
                 <div class="about__softskills">
-                    <h3 class="about__softskills__heading">Weil die Technik nur ein Teil der Lösung ist, bin ich außerdem...</h3>
+                    <h3 class="about__softskills__heading">Weil die Technik nur ein Teil der Lösung ist, bin ich
+                        außerdem...</h3>
                     <div class="about__softskills__cards-container">
                         <div class="softskills__card">
                             <div class="softskills__card--title">teamfähig</div>
-                            <p class="softskills__card--text">Meine jahrelange Erfahrung in der Gastronomie hat mich gelehrt,
+                            <p class="softskills__card--text">Meine jahrelange Erfahrung in der Gastronomie hat mich
+                                gelehrt,
                                 dass man zusammen mehr erreichen kann. Gegenseitige Unterstützung und gute
                                 Kommunikation im Team sind der Schlüssel zu erfolgreichen Projekten.</p>
                         </div>
                         <div class="softskills__card">
                             <div class="softskills__card--title">lernfähig</div>
-                            <p class="softskills__card--text">Wissen schadet nur dem, der es nicht hat.<br> Meine Neugier treibt
+                            <p class="softskills__card--text">Wissen schadet nur dem, der es nicht hat.<br> Meine
+                                Neugier treibt
                                 mich an, jeden Tag etwas Neues zu lernen, mich weiter zu entwickeln und mir das Wissen
                                 anzueignen, welches die aktuelle Aufgabe erfordert.</p>
                         </div>
                         <div class="softskills__card">
                             <div class="softskills__card--title">verantwortungsbewusst</div>
-                            <p class="softskills__card--text">Ich arbeite termingerecht, gewissenhaft und präzise, um das
+                            <p class="softskills__card--text">Ich arbeite termingerecht, gewissenhaft und präzise, um
+                                das
                                 beste Ergebnis für meine Kunden zu erreichen, ohne die Belange des Unternehmens aus den
                                 Augen zu verlieren.</p>
                         </div>
@@ -513,6 +522,7 @@
     </div>
 
     <script src="./js/main.js"></script>
+    <script src="./js/itersectionObserver.js"></script>
 </body>
 
 </html>

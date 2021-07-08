@@ -45,11 +45,7 @@ const links = [...document.getElementsByClassName('nav__link')];
 links.forEach(link => {
     link.addEventListener('click', function (evt) {
         removeActiveClass();
-        const border = evt.target.nextSibling;
-        gsap.to(border, { opacity: 0.75 });
-        gsap.to(border, { y: -35, duration: 0.3 });
-        gsap.to(border, { opacity: 0, y: 0, delay: 0.5 });
-        evt.target.classList.add('nav__link--active');
+        animateNavLinks(evt);        
         closeNav();
     })
 });
@@ -59,6 +55,17 @@ const removeActiveClass = () => {
         link.classList.remove('nav__link--active');
     })
 }
+
+const animateNavLinks = (event) => {
+    console.log(event.target.classList);
+    const border = event.target.nextSibling;
+        gsap.to(border, { opacity: 0.75 });
+        gsap.to(border, { y: -35, duration: 0.3 });
+        gsap.to(border, { opacity: 0, y: 0, delay: 0.5 });
+        event.target.classList.add('nav__link--active');
+}
+
+
 
 
 // ###################################
@@ -176,8 +183,8 @@ btn.forEach(btn => {
     let tlExp = gsap.timeline({ paused: true });
 
     tlExp.to(border, { rotation: 0, duration: 0.1 });
-    tlExp.to(border, { height: btnHeight, y: -16, duration: 0.2 }, "+=0.3");
-    tlExp.to(border, { width: btnWidth, duration: 0.2 }, "+=0.3");
+    tlExp.to(border, { height: btnHeight, y: -16, duration: 0.2 }, "+=0.1");
+    tlExp.to(border, { width: btnWidth, duration: 0.2 }, "+=0.2");
 
     btn.addEventListener('mouseenter', () => {
         tlExp.play();
