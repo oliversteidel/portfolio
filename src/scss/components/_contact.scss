@@ -33,7 +33,7 @@
     form {
         .wrapper {
             width: 100%;
-            
+
             @include mq-up($bp-large) {
                 flex-direction: row;
                 gap: 1rem;
@@ -67,6 +67,11 @@
                 resize: none;
             }
         }
+
+        .wrapper--submit {
+            position: relative;
+            
+        }
         button {
             background: $clr-p10;
             border: 1px solid $clr-p26;
@@ -74,11 +79,41 @@
             color: $clr-p95;
             padding: 0.5em 2.5em;
             text-transform: uppercase;
+            cursor: pointer;
+            transition: border-color 0.5s ease, opacity 0.25s ease-out;
         }
+
+        button:hover,
+        button:focus {
+            border-color: $clr-p39;
+        }
+
+        .btn--success {
+            opacity: 0;
+            
+        }
+
+        .submit-response {
+            color: $clr-p95;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity .5s ease-in;
+            z-index: -1;
+           
+        }
+
+        .submit-response--active {
+            z-index: 0;
+            opacity: 1;
+        }
+
+        
     }
 
     .social-container {
-        width: 100%;        
+        width: 100%;
         justify-content: space-between;
         margin-top: 8rem;
 
@@ -155,7 +190,7 @@
 
         .linkbox-wrapper:last-child {
             @include mq-up($bp-large) {
-                padding-bottom: 2rem;                
+                padding-bottom: 2rem;
             }
         }
 
