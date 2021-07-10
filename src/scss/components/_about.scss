@@ -135,35 +135,37 @@
             transform: translate(0.5em);
         }
 
-        .w1:hover {
-            transform: translate(calc(-24em - 1em), -11em) scale(1.4);
-        }
-        .w2:hover {
-            transform: translate(-8em, -11em) scale(1.4);
-        }
-        .w3:hover {
-            transform: translate(calc(8em + 1em), -11em) scale(1.4);
-        }
-        .w4:hover {
-            transform: translate(calc(-32em - 1.5em)) scale(1.4);
-        }
-        .w5:hover {
-            transform: translate(calc(-16em - 0.5em)) scale(1.4);
-        }
-        .w6:hover {
-            transform: translate(17.5em) scale(1.4);
-        }
-        .w7:hover {
-            transform: translate(calc(-24em - 1em), 11em) scale(1.4);
-        }
-        .w8:hover {
-            transform: translate(-8em, 11em) scale(1.4);
-        }
-        .w9:hover {
-            transform: translate(calc(8em + 1em), 11em) scale(1.4);
-        }
-        .w10:hover {
-            transform: translate(0.5em) scale(1.4);
+        @include mq-up($bp-large) {
+            .w1:hover {
+                transform: translate(calc(-24em - 1em), -11em) scale(1.4);
+            }
+            .w2:hover {
+                transform: translate(-8em, -11em) scale(1.4);
+            }
+            .w3:hover {
+                transform: translate(calc(8em + 1em), -11em) scale(1.4);
+            }
+            .w4:hover {
+                transform: translate(calc(-32em - 1.5em)) scale(1.4);
+            }
+            .w5:hover {
+                transform: translate(calc(-16em - 0.5em)) scale(1.4);
+            }
+            .w6:hover {
+                transform: translate(17.5em) scale(1.4);
+            }
+            .w7:hover {
+                transform: translate(calc(-24em - 1em), 11em) scale(1.4);
+            }
+            .w8:hover {
+                transform: translate(-8em, 11em) scale(1.4);
+            }
+            .w9:hover {
+                transform: translate(calc(8em + 1em), 11em) scale(1.4);
+            }
+            .w10:hover {
+                transform: translate(0.5em) scale(1.4);
+            }
         }
 
         p {
@@ -181,7 +183,7 @@
 
         &__heading {
             font-size: clamp(1.5rem, 4vw, 3.25rem);
-            font-weight: 100;            
+            font-weight: 100;
             color: $clr-p39;
             margin-bottom: 3rem;
 
@@ -191,7 +193,6 @@
         }
 
         &__cards-container {
-
             @include mq-up($bp-xlarge) {
                 display: flex;
             }

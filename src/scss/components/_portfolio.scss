@@ -20,11 +20,7 @@
 
     .container {
         width: 100%;
-        
 
-        // @include mq-up($bp-medium) {
-        //     padding: 0 3rem;
-        // }
         @include mq-up(75em) {
             flex-direction: row;
         }
@@ -56,10 +52,8 @@
         }
 
         &__title--quiz-app {
-            margin: 1em 0;
+            margin: 1.3em 0;
         }
-
-        
 
         &__img-container--rotate {
             position: relative;
@@ -80,7 +74,7 @@
                 }
             }
 
-            .img--rotate {                
+            .img--rotate {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -89,8 +83,6 @@
                 overflow: hidden;
                 border-radius: 5px;
                 box-shadow: 5px 5px 30px 10px rgba(black, 0.2);
-
-                
             }
 
             .img--back {
@@ -132,7 +124,7 @@
 
         .btn-border {
             visibility: hidden;
-            
+
             @include mq-up($bp-xlarge) {
                 visibility: visible;
                 position: absolute;
@@ -148,7 +140,7 @@
             }
         }
 
-        &__link {            
+        &__link {
             position: relative;
             display: block;
             min-width: 11rem;
@@ -166,7 +158,6 @@
                 font-size: 1rem;
             }
 
-
             @include mq-up($bp-xlarge) {
                 border: none;
             }
@@ -178,13 +169,9 @@
         }
     }
 
-    
-
-    .card--tall {      
-
+    .card--tall {
         @include mq-up($bp-medium) {
             min-height: 53.125rem;
-            
         }
     }
 }

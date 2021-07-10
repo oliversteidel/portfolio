@@ -142,7 +142,7 @@ const moveTechItems = () => {
 // configs timeline(arg1) animation for element(arg2); creates random coordinates 2 times
 const moveItem = (timeline, element) => {
     timeline.to(element, { duration: 2, opacity: 0.2 });
-    let [posX, posY] = setRandomCoordinates(0, 500);
+    let [posX, posY] = setRandomCoordinates(-250, 250);
     timeline.to(element, { duration: 10, x: posX, y: posY });
     [posX, posY] = setRandomCoordinates(-300, 0);
     timeline.to(element, { duration: 10, x: posX, y: posY });
@@ -207,11 +207,15 @@ const techContainer = document.querySelector(".container--tech");
 
 polygons.forEach(polygon => {
     polygon.addEventListener('mouseover', function () {
-        techContainer.classList.add("fz-large");
+        if(document.body.clientWidth > 1000) {
+            techContainer.classList.add("fz-large");
+        }        
     })
 
     polygon.addEventListener('mouseleave', function () {
-        techContainer.classList.remove("fz-large");
+        if(document.body.clientWidth > 1000) {
+            techContainer.classList.remove("fz-large");
+        }
     })
 })
 
