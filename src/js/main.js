@@ -1,8 +1,15 @@
 //first-name & last-name slide-in animation
 //subtitle fade-in animation
-gsap.from(".first-name", { duration: 1, x: 200, opacity: 0, ease: "power3.out", delay: 0.75 });
-gsap.from(".last-name", { duration: 1, x: -100, opacity: 0, ease: "power3.out", delay: 0.5 });
-gsap.to(".overlay", { duration: 1, scaleX: 0, delay: 2 });
+gsap.to(".first-name", { duration: 1, x: 0, opacity: 1, ease: "power3.out", delay: 0.75 });
+gsap.to(".last-name", { duration: 1, x: 0, opacity: 1, ease: "power3.out", delay: 0.5 });
+gsap.to(".overlay", { duration: 1, scaleX: 0, delay: 2, onComplete: showScrollIcon });
+
+function showScrollIcon() {
+    const scollIcon = document.querySelectorAll('.scroll-icon');    
+    scollIcon.forEach(el => {
+        el.style.opacity = "1";        
+    })
+}
 
 
 // ##################################

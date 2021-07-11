@@ -40,6 +40,13 @@
             }
         }
 
+        input::placeholder, textarea::placeholder {
+            color: $clr-p95;
+            opacity: 0.75;
+            font-weight: 200;
+
+        }
+
         .form-group {
             width: 100%;
             margin-bottom: 1rem;

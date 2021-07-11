@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
-    <title>Oliver Steidel - Webentwickler</title>
+    <title>Oliver Steidel - Frontend Webdeveloper</title>
 </head>
 
 <body>
@@ -84,8 +84,8 @@
                     <h1><span class="first-name">oliver</span><span class="last-name">steidel</span></h1>
                     <h2 class="sub-title">Frontend Webdeveloper <span class="overlay"></span></h2>
                 </header>
-                <div class="hero__scroll-icon">
-                    <div class="hero__scroll-point"></div>
+                <div class="hero__scroll-icon scroll-icon">
+                    <div class="hero__scroll-point scroll-icon"></div>
                 </div>
             </section>
             <section class="portfolio" id="portfolio">
@@ -118,7 +118,7 @@
                         <h3 class="card__title">Website für eine Fotografin</h3>
                         <div class="card__img-container--rotate card__img-container--small">
                             <div class="img--acr img--rotate img--front">
-                                <img src="./img/projects/sally-2.jpg" alt="">
+                                <img src="./img/projects/sally-2.jpg" alt="landingpage der Sally-Photography Website">
                             </div>
                             <div class="img--acr img--rotate img--back">
                                 <img src="./img/projects/sally.jpg" alt="">
@@ -128,11 +128,11 @@
                         <div class="card__links-container flex ai-c jc-sb">
                             <div class="wrapper">
                                 <span class="btn-border"></span>
-                                <a href="https://dev.oliversteidel.de/" class="card__link">zum projekt</a>
+                                <a href="https://dev.oliversteidel.de/" class="card__link" target="_blank">zum projekt</a>
                             </div>
                             <div class="wrapper">
                                 <span class="btn-border"></span>
-                                <a href="https://github.com/oliversteidel/sally_photography" class="card__link">Code
+                                <a href="https://github.com/oliversteidel/sally_photography" class="card__link" target="_blank">Code
                                     ansehen</a>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                         <p class="about__text">Als gelernter Hotelfachmann und Bartender zwang mich die Corona Pandemie
                             in
                             die Arbeitslosigkeit
-                            und eröffnete mir gleichzeitig meine größte Chance. Ich nutzte die Zeit und lernte zu
+                            und eröffnete mir gleichzeitig meine größte Chance für einen Karrierewechsel. Ich nutzte die Zeit und lernte zu
                             programmieren. Was als Hobby begann entwickelte sich schnell zu einer Leidenschaft.</p>
                         <p class="about__text">Meine Kenntnisse habe ich mir im Eigenstudium angeeignet, mit dem Ziel
                             vor
@@ -246,7 +246,7 @@
                             </div>
                             <div class="tech-wrapper w7">
                                 <div class="polygon">
-                                    <p>Node.js</p>
+                                    <p>GSAP</p>
                                 </div>
                             </div>
                             <div class="tech-wrapper w8">
@@ -256,7 +256,7 @@
                             </div>
                             <div class="tech-wrapper w9">
                                 <div class="polygon">
-                                    <p>Git</p>
+                                    <p>Gulp</p>
                                 </div>
                             </div>
                             <div class="tech-wrapper w10">
@@ -301,32 +301,32 @@
                 <h2 class="contact__title">contact</h2>
                 <div class="container flex-col">
                     <div class="form-container">
-                        <form action="" id="email-form">
+                        <form action="email-process.php" method="post" id="email-form">
                             <div class="wrapper flex-col">
                                 <div class="form-group">
                                     <label for="name" id="name-label">Name</label>
-                                    <input type="text" name="name" id="name" aria-labelledby="name-label"
+                                    <input type="text" name="Name" id="Name" aria-labelledby="name-label"
                                         placeholder="Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="firm" id="firm-label">Firma</label>
-                                    <input type="text" name="firm" id="firm" aria-labelledby="firm-label"
+                                    <input type="text" name="Firm" id="Firm" aria-labelledby="firm-label"
                                         placeholder="Firma">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" id="email-label">Email</label>
-                                <input type="text" name="email" id="email" aria-labelledby="email-label"
+                                <input type="text" name="Email" id="Email" aria-labelledby="email-label"
                                     placeholder="E-Mail Adresse">
                             </div>
                             <div class="form-group">
                                 <label for="message" id="message-label">Nachricht</label>
-                                <textarea name="message" id="message" cols="30" rows="10"
+                                <textarea name="Message" id="Message" cols="30" rows="10"
                                     aria-labelledby="message-label" placeholder="Ihre Nachricht"></textarea>
                             </div>
                             <div class="wrapper--submit">
                                 <p class="submit-response">Ihre Nachricht wurde gesendet. Vielen Dank.</p>
-                                <button class="btn btn-submit" >
+                                <button type="submit" class="btn btn-submit" >
                                     senden
                                 </button>
                             </div>
@@ -538,7 +538,7 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/itersectionObserver.js"></script>
-    <script src="./js/mailhandler.js"></script>
+    
 </body>
 
 </html>

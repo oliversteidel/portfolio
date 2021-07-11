@@ -362,6 +362,7 @@ select {
   display: block;
   font-weight: 900;
   line-height: 0.75em;
+  opacity: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#0099e6), to(#003a66));
   background: linear-gradient(#0099e6, #003a66);
   background-clip: text;
@@ -371,10 +372,14 @@ select {
 .hero__header .first-name {
   font-size: 3em;
   margin-left: 0.25em;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
 }
 .hero__header .last-name {
   text-transform: uppercase;
   font-size: 4.5em;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 .hero__header .sub-title {
   position: relative;
@@ -398,7 +403,7 @@ select {
 }
 .hero__scroll-icon {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -406,6 +411,9 @@ select {
   height: 3rem;
   border: 1px solid #0085c7;
   border-radius: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 .hero__scroll-point {
   position: absolute;
@@ -417,6 +425,9 @@ select {
   height: 6px;
   background: #0085c7;
   border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
   -webkit-animation: 1s infinite alternate moveScrollPoint;
           animation: 1s infinite alternate moveScrollPoint;
 }
@@ -943,6 +954,31 @@ select {
     gap: 1rem;
   }
 }
+.contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder {
+  color: #e6f7ff;
+  opacity: 0.75;
+  font-weight: 200;
+}
+.contact form input::-moz-placeholder, .contact form textarea::-moz-placeholder {
+  color: #e6f7ff;
+  opacity: 0.75;
+  font-weight: 200;
+}
+.contact form input:-ms-input-placeholder, .contact form textarea:-ms-input-placeholder {
+  color: #e6f7ff;
+  opacity: 0.75;
+  font-weight: 200;
+}
+.contact form input::-ms-input-placeholder, .contact form textarea::-ms-input-placeholder {
+  color: #e6f7ff;
+  opacity: 0.75;
+  font-weight: 200;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  color: #e6f7ff;
+  opacity: 0.75;
+  font-weight: 200;
+}
 .contact form .form-group {
   width: 100%;
   margin-bottom: 1rem;
@@ -1133,4 +1169,5 @@ html {
 .container {
   width: 100vw;
   max-width: 160rem;
+  overflow-x: hidden;
 }
