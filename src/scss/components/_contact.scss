@@ -73,12 +73,17 @@
                 padding: 1rem;
                 resize: none;
             }
+
+            input:focus,
+            textarea:focus {
+                border: 2px solid $clr-p39;
+            }
         }
 
         .wrapper--submit {
-            position: relative;
-            
+            position: relative;            
         }
+
         button {
             background: $clr-p10;
             border: 1px solid $clr-p26;
@@ -92,7 +97,7 @@
 
         button:hover,
         button:focus {
-            border-color: $clr-p39;
+            border: 2px solid $clr-p39;
         }
 
         .btn--success {
@@ -201,11 +206,18 @@
             }
         }
 
-        .linkbox-wrapper:hover {
+        .linkbox-wrapper:hover,
+        .linkbox-wrapper:focus-within {
             perspective-origin: 50% 10%;
+            outline: 1px dotted $clr-p95;
+            outline-offset: 1rem;
         }
 
         .linkbox-wrapper:hover .scene {
+            animation: 10s linear infinite rotateBox;
+        }
+
+        .scene:focus-within {
             animation: 10s linear infinite rotateBox;
         }
 
@@ -213,6 +225,10 @@
             to {
                 transform: rotateY(360deg);
             }
+        }
+
+        .linkbox:focus {
+            outline: none;
         }
     }
 }

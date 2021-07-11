@@ -1,0 +1,34 @@
+@use '../setup/index' as *;
+
+footer {
+    width: 100%;
+    min-height: 10rem;
+    background: $clr-p10;
+    border-top: 1px solid $clr-p26;
+
+    a {
+        margin-bottom: 1rem;
+        color: $clr-p95;
+        transition: color 0.3s ease-in;
+    }
+
+    a:hover {
+        color: $clr-p39;
+    }
+
+    p {
+        color: $clr-p39;
+
+        span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 0.5rem;
+            border-radius: 50%;
+            background: $clr-p39;
+            transform: translateY(-40%);
+        }
+    }
+
+
+}

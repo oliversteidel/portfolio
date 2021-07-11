@@ -122,7 +122,8 @@
                 transform: scaleX(0);
             }
 
-            .nav__link:hover::before {
+            .nav__link:hover::before,
+            .nav__link:focus::before {                
                 transform: scaleX(1);
             }
 

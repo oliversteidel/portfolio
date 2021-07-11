@@ -278,7 +278,8 @@ select {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
 }
-.nav__links li .nav__link:hover::before {
+.nav__links li .nav__link:hover::before,
+.nav__links li .nav__link:focus::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -634,6 +635,10 @@ select {
   .portfolio .card__link {
     border: none;
   }
+}
+.portfolio .card__link:focus {
+  outline: 1px dotted #e6f7ff;
+  outline-offset: 0.5rem;
 }
 .portfolio .card .wrapper:hover .btn-border {
   border-color: #004b85;
@@ -1002,6 +1007,10 @@ select {
   padding: 1rem;
   resize: none;
 }
+.contact form .form-group input:focus,
+.contact form .form-group textarea:focus {
+  border: 2px solid #0085c7;
+}
 .contact form .wrapper--submit {
   position: relative;
 }
@@ -1018,7 +1027,7 @@ select {
 }
 .contact form button:hover,
 .contact form button:focus {
-  border-color: #0085c7;
+  border: 2px solid #0085c7;
 }
 .contact form .btn--success {
   opacity: 0;
@@ -1142,11 +1151,18 @@ select {
     padding-bottom: 2rem;
   }
 }
-.contact .social-container .linkbox-wrapper:hover {
+.contact .social-container .linkbox-wrapper:hover,
+.contact .social-container .linkbox-wrapper:focus-within {
   -webkit-perspective-origin: 50% 10%;
           perspective-origin: 50% 10%;
+  outline: 1px dotted #e6f7ff;
+  outline-offset: 1rem;
 }
 .contact .social-container .linkbox-wrapper:hover .scene {
+  -webkit-animation: 10s linear infinite rotateBox;
+          animation: 10s linear infinite rotateBox;
+}
+.contact .social-container .scene:focus-within {
   -webkit-animation: 10s linear infinite rotateBox;
           animation: 10s linear infinite rotateBox;
 }
@@ -1161,6 +1177,38 @@ select {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
+}
+.contact .social-container .linkbox:focus {
+  outline: none;
+}
+
+footer {
+  width: 100%;
+  min-height: 10rem;
+  background: #15181e;
+  border-top: 1px solid #004b85;
+}
+footer a {
+  margin-bottom: 1rem;
+  color: #e6f7ff;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+footer a:hover {
+  color: #0085c7;
+}
+footer p {
+  color: #0085c7;
+}
+footer p span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  background: #0085c7;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
 }
 
 html {

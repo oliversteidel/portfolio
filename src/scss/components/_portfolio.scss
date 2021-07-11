@@ -160,8 +160,13 @@
 
             @include mq-up($bp-xlarge) {
                 border: none;
-            }
+            }   
         }
+
+        &__link:focus {
+            outline: 1px dotted $clr-p95;
+            outline-offset: 0.5rem;
+        }     
 
         .wrapper:hover .btn-border {
             border-color: $clr-p26;

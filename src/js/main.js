@@ -200,6 +200,19 @@ btn.forEach(btn => {
         tlExp.pause();
         tlExp.reverse();
     });
+
+    btn.addEventListener('focus', () => {
+        tlExp.play();
+        border.style.borderColor = 'hsl(206, 100%, 26%)';
+        border.style.borderRadius = '5px';
+    });
+
+    btn.addEventListener('focusout', () => {
+        tlExp.pause();
+        tlExp.reverse();
+        border.style.borderColor = 'hsl(199, 100%, 95%)';
+        border.style.borderRadius = '0';
+    });
 })
 
 
