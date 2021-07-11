@@ -71,7 +71,7 @@ if (isset($_POST['Email'])) {
 
     <!-- include your success message below -->
 <?php
-require 'email-success.view.php';
+//require 'email-success.view.php';
 ?>
 <?php
 }

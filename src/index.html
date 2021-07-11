@@ -18,6 +18,9 @@
 
 <body>
     <div class="container">
+
+<!-- ############### NAVIGATION ###################### --> 
+
         <nav class="nav flex ai-c jc-sb">
             <div class="nav__logo-container">
                 <svg width="100" height="42" viewBox="0 0 100 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +74,9 @@
             </ul>
         </nav>
         <main>
+
+<!-- ############### HERO SECTION ###################### -->
+
             <section class="hero flex ai-c" id="hero">
                 <div class="hero__background">
                     <span class="tech tech1" aria-hidden="true">HTML5</span>
@@ -88,6 +94,9 @@
                     <div class="hero__scroll-point scroll-icon"></div>
                 </div>
             </section>
+
+<!-- ############### PORTFOLIO SECTION ###################### -->
+
             <section class="portfolio" id="portfolio">
                 <h2 class="portfolio__title">Portfolio</h2>
                 <div class="container flex-col ai-c jc-sb">
@@ -192,6 +201,9 @@
                     </div>
                 </div>
             </section>
+
+<!-- ############### ABOUT SECTION ###################### -->
+
             <section class="about" id="about">
                 <div class="about__wrapper flex-col">
                     <div class="container">
@@ -296,12 +308,14 @@
                     </div>
                 </div>
             </section>
-            <section class="contact" id="contact">
 
+<!-- ############### CONTACT SECTION ###################### -->
+
+            <section class="contact" id="contact">
                 <h2 class="contact__title">contact</h2>
                 <div class="container flex-col">
                     <div class="form-container">
-                        <form action="email-process.php" method="post" id="email-form">
+                        <form action=""  id="email-form">
                             <div class="wrapper flex-col">
                                 <div class="form-group">
                                     <label for="name" id="name-label">Name</label>
@@ -326,7 +340,7 @@
                             </div>
                             <div class="wrapper--submit">
                                 <p class="submit-response">Ihre Nachricht wurde gesendet. Vielen Dank.</p>
-                                <button type="submit" class="btn btn-submit" >
+                                <button  class="btn btn-submit" >
                                     senden
                                 </button>
                             </div>
@@ -538,6 +552,7 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/itersectionObserver.js"></script>
+    <script src="./js/mailhandler.js"></script>
     
 </body>
 
