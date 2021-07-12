@@ -1,0 +1,83 @@
+@use '../setup/index' as *;
+
+.container--impressum,
+.container--datenschutz {
+    min-height: 100vh;
+    background: $clr-p10;
+    padding: 0 1rem;
+
+    @include mq-up($bp-medium) {
+        padding: 0 3rem;
+    }
+
+    @include mq-up($bp-large) {
+        padding: 0 6rem;
+    }
+
+    
+    h1 {
+        margin-top: 8rem;
+        font-size: clamp(2.2rem, 5vw, 5rem);
+        font-weight: 200;
+        text-transform: uppercase;
+        color: $clr-p39;
+        margin-bottom: 3rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        font-weight: 200;
+        margin: 2rem 0;
+        color: $clr-p39;
+    }
+
+    h3 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        margin: 1rem 0;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        font-weight: 200;
+        color: $clr-p95;
+        max-width: 60ch;
+    }
+
+    p:last-child {
+        margin-top: 2rem;
+    }
+
+    a {
+        color: $clr-p95;
+        transition: color 0.3s ease-in;
+    }
+
+    a:hover {
+        color: $clr-p26;
+    }
+}
+
+.container--datenschutz {
+    p,
+    li {
+        font-size: 1rem;
+        font-weight: 200;
+        color: $clr-p95;
+        max-width: 60ch;
+    }
+
+    li {
+        margin: 1rem 0 1rem 2rem;
+    }
+}
+
+.nav__link--white {
+    color: $clr-p95 !important;
+}
+

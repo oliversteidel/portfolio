@@ -8,15 +8,7 @@
 
     @include mq-up($bp-large) {
         padding: 6.25rem 5rem;
-    }
-
-    &__title {
-        font-size: clamp(2.8rem, 5vw, 6.25rem);
-        font-weight: 100;
-        text-transform: uppercase;
-        @include text-gradient($gradient-p);
-        margin-bottom: 3rem;
-    }
+    }   
 
     .container {
         width: 100%;
@@ -206,7 +198,10 @@
             }
         }
 
-        .linkbox-wrapper:hover,
+        .linkbox-wrapper:hover   {
+            perspective-origin: 50% 10%;
+        }
+        
         .linkbox-wrapper:focus-within {
             perspective-origin: 50% 10%;
             outline: 1px dotted $clr-p95;

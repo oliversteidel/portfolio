@@ -10,14 +10,6 @@
         padding: 6.25rem 5rem;
     }
 
-    &__title {
-        font-size: clamp(2.8rem, 5vw, 6.25rem);
-        font-weight: 100;
-        text-transform: uppercase;
-        @include text-gradient($gradient-p);
-        margin-bottom: 3rem;
-    }
-
     .container {
         width: 100%;
 
@@ -160,13 +152,13 @@
 
             @include mq-up($bp-xlarge) {
                 border: none;
-            }   
+            }
         }
 
         &__link:focus {
             outline: 1px dotted $clr-p95;
             outline-offset: 0.5rem;
-        }     
+        }
 
         .wrapper:hover .btn-border {
             border-color: $clr-p26;

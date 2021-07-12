@@ -456,17 +456,6 @@ select {
     padding: 6.25rem 5rem;
   }
 }
-.portfolio__title {
-  font-size: clamp(2.8rem, 5vw, 6.25rem);
-  font-weight: 100;
-  text-transform: uppercase;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0099e6), to(#003a66));
-  background: linear-gradient(#0099e6, #003a66);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 3rem;
-}
 .portfolio .container {
   width: 100%;
 }
@@ -668,17 +657,6 @@ select {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-}
-.about__title {
-  font-size: clamp(2.8rem, 5vw, 6.25rem);
-  font-weight: 100;
-  text-transform: uppercase;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0099e6), to(#003a66));
-  background: linear-gradient(#0099e6, #003a66);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 3rem;
 }
 .about__text {
   max-width: 60ch;
@@ -922,17 +900,6 @@ select {
     padding: 6.25rem 5rem;
   }
 }
-.contact__title {
-  font-size: clamp(2.8rem, 5vw, 6.25rem);
-  font-weight: 100;
-  text-transform: uppercase;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0099e6), to(#003a66));
-  background: linear-gradient(#0099e6, #003a66);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 3rem;
-}
 .contact .container {
   width: 100%;
 }
@@ -1151,7 +1118,10 @@ select {
     padding-bottom: 2rem;
   }
 }
-.contact .social-container .linkbox-wrapper:hover,
+.contact .social-container .linkbox-wrapper:hover {
+  -webkit-perspective-origin: 50% 10%;
+          perspective-origin: 50% 10%;
+}
 .contact .social-container .linkbox-wrapper:focus-within {
   -webkit-perspective-origin: 50% 10%;
           perspective-origin: 50% 10%;
@@ -1194,7 +1164,8 @@ footer a {
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
 }
-footer a:hover {
+footer a:hover,
+footer a:focus {
   color: #0085c7;
 }
 footer p {
@@ -1211,6 +1182,90 @@ footer p span {
           transform: translateY(-40%);
 }
 
+.container--impressum,
+.container--datenschutz {
+  min-height: 100vh;
+  background: #15181e;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 50em) {
+  .container--impressum,
+.container--datenschutz {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 62.5em) {
+  .container--impressum,
+.container--datenschutz {
+    padding: 0 6rem;
+  }
+}
+.container--impressum h1,
+.container--datenschutz h1 {
+  margin-top: 8rem;
+  font-size: clamp(2.2rem, 5vw, 5rem);
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #0085c7;
+  margin-bottom: 3rem;
+}
+.container--impressum h2,
+.container--impressum h3,
+.container--impressum h4,
+.container--datenschutz h2,
+.container--datenschutz h3,
+.container--datenschutz h4 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 200;
+  margin: 2rem 0;
+  color: #0085c7;
+}
+.container--impressum h3,
+.container--datenschutz h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 1rem 0;
+}
+.container--impressum h4,
+.container--datenschutz h4 {
+  font-size: 1.5rem;
+}
+.container--impressum p,
+.container--datenschutz p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 200;
+  color: #e6f7ff;
+  max-width: 60ch;
+}
+.container--impressum p:last-child,
+.container--datenschutz p:last-child {
+  margin-top: 2rem;
+}
+.container--impressum a,
+.container--datenschutz a {
+  color: #e6f7ff;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+.container--impressum a:hover,
+.container--datenschutz a:hover {
+  color: #004b85;
+}
+
+.container--datenschutz p,
+.container--datenschutz li {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #e6f7ff;
+  max-width: 60ch;
+}
+.container--datenschutz li {
+  margin: 1rem 0 1rem 2rem;
+}
+
+.nav__link--white {
+  color: #e6f7ff !important;
+}
+
 html {
   font-family: "Raleway", sans-serif;
 }
@@ -1219,4 +1274,16 @@ html {
   width: 100vw;
   max-width: 160rem;
   overflow-x: hidden;
+}
+
+.section__title {
+  font-size: clamp(2.8rem, 5vw, 6.25rem);
+  font-weight: 100;
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0099e6), to(#003a66));
+  background: linear-gradient(#0099e6, #003a66);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
 }

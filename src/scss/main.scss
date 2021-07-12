@@ -5,18 +5,23 @@
 @use './components/about';
 @use './components/contact';
 @use './components/footer';
+@use './components/impressum';
 
 html {
     font-family: $ff-p;
-    
 }
 
 .container {
     width: 100vw;
     max-width: 160rem;
-    overflow-x: hidden;
-
+    overflow-x: hidden;    
 }
 
 
-
+.section__title {
+    font-size: clamp(2.8rem, 5vw, 6.25rem);
+    font-weight: 100;
+    text-transform: uppercase;
+    @include text-gradient($gradient-p);
+    margin-bottom: 3rem;
+}

@@ -16,14 +16,6 @@
         }
     }
 
-    &__title {
-        font-size: clamp(2.8rem, 5vw, 6.25rem);
-        font-weight: 100;
-        text-transform: uppercase;
-        @include text-gradient($gradient-p);
-        margin-bottom: 3rem;
-    }
-
     &__text {
         max-width: 60ch;
         font-size: clamp(1rem, 3vw, 1.3rem);
