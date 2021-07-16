@@ -630,8 +630,8 @@ select {
   outline-offset: 0.5rem;
 }
 .portfolio .card .wrapper:hover .btn-border {
-  border-color: #004b85;
-  border-radius: 5px;
+  border-color: #004b85 !important;
+  border-radius: 5px !important;
 }
 @media only screen and (min-width: 50em) {
   .portfolio .card--tall {

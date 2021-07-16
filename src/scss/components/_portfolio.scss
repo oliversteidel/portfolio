@@ -161,8 +161,8 @@
         }
 
         .wrapper:hover .btn-border {
-            border-color: $clr-p26;
-            border-radius: 5px;
+            border-color: $clr-p26 !important;
+            border-radius: 5px !important   ;
         }
     }
 
