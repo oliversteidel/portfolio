@@ -28,6 +28,7 @@
 
     .container {
         width: 100%;
+        overflow: visible;
     }
 
     .container--tech {
@@ -40,9 +41,9 @@
             font-size: 5px;
         }
 
-        @include mq-up(25.625em) {
-            font-size: 6px;
-        }
+        // @include mq-up(25.625em) {
+        //     font-size: 6px;
+        // }
 
         @include mq-up(31.25em) {
             font-size: 7px;
@@ -58,10 +59,12 @@
 
         @include mq-up($bp-medium) {
             font-size: 10px;
+            margin: 3rem 0;
         }
 
         @include mq-up($bp-xlarge) {
             height: 100%;
+            margin: 0;
         }
 
         .tech-wrapper {
@@ -185,7 +188,7 @@
         }
 
         &__cards-container {
-            @include mq-up($bp-xlarge) {
+            @include mq-up(68.75em) {
                 display: flex;
             }
             .softskills__card {
@@ -216,6 +219,10 @@
             }
 
             .softskills__card + .softskills__card {
+                @include mq-up($bp-large) {
+                    margin-left: 2rem;
+                }
+
                 @include mq-up($bp-xlarge) {
                     margin-left: 6rem;
                 }

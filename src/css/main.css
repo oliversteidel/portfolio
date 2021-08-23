@@ -669,6 +669,7 @@ select {
 }
 .about .container {
   width: 100%;
+  overflow: visible;
 }
 .about .container--tech {
   position: relative;
@@ -679,11 +680,6 @@ select {
 @media only screen and (min-width: 23.125em) {
   .about .container--tech {
     font-size: 5px;
-  }
-}
-@media only screen and (min-width: 25.625em) {
-  .about .container--tech {
-    font-size: 6px;
   }
 }
 @media only screen and (min-width: 31.25em) {
@@ -704,11 +700,13 @@ select {
 @media only screen and (min-width: 50em) {
   .about .container--tech {
     font-size: 10px;
+    margin: 3rem 0;
   }
 }
 @media only screen and (min-width: 90em) {
   .about .container--tech {
     height: 100%;
+    margin: 0;
   }
 }
 .about .container--tech .tech-wrapper {
@@ -851,7 +849,7 @@ select {
     margin: 3rem 0;
   }
 }
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 68.75em) {
   .about__softskills__cards-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -882,6 +880,11 @@ select {
   font-weight: 200;
   line-height: 1.75em;
   letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 62.5em) {
+  .about__softskills__cards-container .softskills__card + .softskills__card {
+    margin-left: 2rem;
+  }
 }
 @media only screen and (min-width: 90em) {
   .about__softskills__cards-container .softskills__card + .softskills__card {
