@@ -39,11 +39,7 @@
 
         @include mq-up($bp-xsmall) {
             font-size: 5px;
-        }
-
-        // @include mq-up(25.625em) {
-        //     font-size: 6px;
-        // }
+        }       
 
         @include mq-up(31.25em) {
             font-size: 7px;
